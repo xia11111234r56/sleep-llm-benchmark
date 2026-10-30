@@ -1,0 +1,33 @@
+# ── 绝对不能上传 ────────────────────────────────────────────
+# 1. 浏览器 profile：含百度登录态 cookie
+.browser_profile/
+
+# 2. 所有含原始正文的数据文件。
+#    这些是真实人群的失眠/抑郁自述，二次公开分发既违反项目伦理约定，
+#    也可能给发帖人带来风险。仓库只放代码和聚合结果。
+data/raw/
+data/labeled/
+data/splits/
+
+#    清洗目录整目录忽略，但保留聚合统计（不含任何原文）
+data/clean/*
+!data/clean/stats.md
+
+# 3. 模型原始输出：raw_response / evidence 里会带出原文片段
+outputs/raw_prompt_responses.jsonl
+
+# 4. LoRA 权重（50MB+ 二进制，且训练数据不在仓库里，权重没有复现意义）
+outputs/lora_adapter*/
+outputs/_qlora_ckpt/
+
+# 5. 密钥
+.env
+*.key
+
+# ── 常规忽略 ────────────────────────────────────────────────
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store
+Thumbs.db

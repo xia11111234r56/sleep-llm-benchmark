@@ -1,0 +1,25 @@
+# ---- 数据采集与处理 ----
+selenium>=4.20          # 贴吧是 CSR，必须用浏览器（Edge 驱动由 Selenium Manager 自动管理）
+requests>=2.31
+beautifulsoup4>=4.12
+pandas>=2.2
+
+# ---- 大模型调用 ----
+openai>=1.30            # Qwen / DeepSeek 都兼容 OpenAI 接口
+
+# ---- 评测 ----
+scikit-learn>=1.5       # classification_report, cohen_kappa_score
+matplotlib>=3.8
+seaborn>=0.13
+
+# ---- 标注工具 ----
+streamlit>=1.35         # 可选；不用的话直接标 Excel/CSV 也行
+
+# ---- 微调（仅在 GPU 机器上装，本地 4GB 显存跑不动） ----
+# torch>=2.3
+# transformers>=4.44
+# peft>=0.12
+# bitsandbytes>=0.43
+# datasets>=2.20
+# accelerate>=0.33
+# unsloth            # 替代方案：更快更省显存，但和上面几个有冲突，二选一
